@@ -38,9 +38,12 @@ public class RulesOf6005 {
             boolean availableToOthers, boolean writtenAsCourseWork,
             boolean citingYourSource, boolean implementationRequired) {
         
-    	return true;
-        
-//        throw new RuntimeException("implement me!");
+    	if(writtenByYourself
+            && !availableToOthers && writtenAsCourseWork
+            && citingYourSource && implementationRequired)
+    		return true;
+    	else
+    		return false;
     }
     
     /**
